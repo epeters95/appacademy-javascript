@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <script src="./underscore.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="./hanoi.js"></script>
+    <script src="./hanoi_ui.js"></script>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+    <style>
+    @import url(http://reset5.googlecode.com/hg/reset.min.css);
+    #game {
+      width: 100%;
+    }
+    .tower {
+      display: inline-block;
+      height: 100%;
+    }
+    .disc {
+      background-color: blue;
+      height: 100%;
+      margin: auto;
+      border-radius: 10px;
+    }
+    .discHolder {
+      height: 50px;
+    }
+    
+    </style>
+  </head>
+  <body>
+    
+    <div id="game"></div>
+    <script>
+    var HanoiNode = $("#game");
+    var ui = new Hanoi.UI(HanoiNode);
+    ui.makeTowers();
+    ui.render();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script src="./underscore.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="./ticTacToe.js"></script>
+    <script src="./ttt_ui.js"></script>
+    <style>
+    @import url(http://reset5.googlecode.com/hg/reset.min.css);
+    table#ttt td {
+      width: 200px;
+      height: 200px;
+      border: 3px solid black;
+      line-height: 0;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 800;
+    }
+    body {
+      font-family: Avenir;
+      font-size: 200px;
+    }
+    </style>
+  </head>
+  <body>
+    <table id="ttt"></table>
+    <script>
+    var TTTNode = $("#ttt");
+    var ui = new TTT.UI(TTTNode);
+    ui.makeBoard();
+    </script>
+  </body>
+</html>
